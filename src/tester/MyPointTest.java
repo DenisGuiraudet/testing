@@ -65,7 +65,7 @@ class MyPointTest {
     }
 
     @Test
-    public void testCentralSymmetryNULL () {
+    void testCentralSymmetryNULL () {
         assertThrows(IllegalArgumentException.class,
                 () -> {
                     MyPoint myNewPoint = new MyPoint(10, 20).centralSymmetry(null);
