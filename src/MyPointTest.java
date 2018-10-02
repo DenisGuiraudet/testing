@@ -3,8 +3,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MyPointTest {
 
+    private MyPoint myPointEmpty, myPointFilled;
+
     @BeforeEach
     void setUp() {
+        myPointEmpty = new MyPoint();
+        myPointFilled = new MyPoint(11.1, 12.2);
     }
 
     @AfterEach
@@ -13,47 +17,41 @@ class MyPointTest {
 
     @Test
     void testGetEmpty() {
-        MyPoint myPoint = new MyPoint();
-        assertEquals(0d, myPoint.getX());
-        assertEquals(0d, myPoint.getY());
+        assertEquals(0d, myPointEmpty.getX());
+        assertEquals(0d, myPointEmpty.getY());
     }
 
     @Test
     void testGetFilled() {
-        MyPoint myPoint = new MyPoint(11.1, 12.2);
-        assertEquals(11.1, myPoint.getX());
-        assertEquals( 12.2, myPoint.getY());
+        assertEquals(11.1, myPointFilled.getX());
+        assertEquals( 12.2, myPointFilled.getY());
     }
 
     @Test
     void testSetGetX() {
-        MyPoint myPoint = new MyPoint();
-        myPoint.setX(13.3);
-        assertEquals(13.3, myPoint.getX());
+        myPointEmpty.setX(13.3);
+        assertEquals(13.3, myPointEmpty.getX());
     }
 
     @Test
     void testSetGetY() {
-        MyPoint myPoint = new MyPoint();
-        myPoint.setY(14.4);
-        assertEquals(14.4, myPoint.getY());
+        myPointEmpty.setY(14.4);
+        assertEquals(14.4, myPointEmpty.getY());
     }
 
     @Test
     void testDoubleNaN() {
-        MyPoint myPoint = new MyPoint();
-        myPoint.setX(Double.NaN);
-        assertNotEquals(Double.NaN, myPoint.getX());
+        myPointEmpty.setX(Double.NaN);
+        assertNotEquals(Double.NaN, myPointEmpty.getX());
     }
 
     @Test
     void testScale() {
-        MyPoint myPoint = new MyPoint(1, 2);
         int factor = 7;
-        MyPoint myNewPoint = myPoint.scale(factor);
-        assertEquals(myPoint.getX()*factor,
+        MyPoint myNewPoint = myPointFilled.scale(factor);
+        assertEquals(myPointFilled.getX() * factor,
                 myNewPoint.getX());
-        assertEquals(myPoint.getY()*factor,
+        assertEquals(myPointFilled.getY() * factor,
                 myNewPoint.getY());
     }
 }
