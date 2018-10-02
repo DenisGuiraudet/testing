@@ -45,4 +45,15 @@ class MyPointTest {
         myPoint.setX(Double.NaN);
         assertNotEquals(Double.NaN, myPoint.getX());
     }
+
+    @Test
+    void testScale() {
+        MyPoint myPoint = new MyPoint(1, 2);
+        int factor = 7;
+        MyPoint myNewPoint = myPoint.scale(factor);
+        assertEquals(myPoint.getX()*factor,
+                myNewPoint.getX());
+        assertEquals(myPoint.getY()*factor,
+                myNewPoint.getY());
+    }
 }
