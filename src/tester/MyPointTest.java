@@ -1,3 +1,5 @@
+package tester;
+
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -61,4 +63,14 @@ class MyPointTest {
         assertEquals((myPointFilled.getX() + myPointEmpty.getX()) / 2,
                 myNewPoint.getX());
     }
+
+    @Test
+    public void testCentralSymmetryNULL () {
+        assertThrows(IllegalArgumentException.class,
+                () -> {
+                    MyPoint myNewPoint = new MyPoint(10, 20).centralSymmetry(null);
+                });
+        ;
+    }
+
 }

@@ -1,3 +1,5 @@
+package tester;
+
 import java.util.Random;
 
 import static java.lang.Math.PI;
@@ -11,7 +13,7 @@ public class MyPoint {
 	private double y;
 
 	/**
-	 * Creates a MyPoint with coordinates (0, 0).
+	 * Creates a tester.MyPoint with coordinates (0, 0).
 	 */
 	public MyPoint() {
 		this(0d, 0d);
@@ -20,7 +22,7 @@ public class MyPoint {
 
 	/**
 	 * Constructor 2
-	 * Creates a MyPoint with the specified coordinates.
+	 * Creates a tester.MyPoint with the specified coordinates.
 	 * @param x The X-coordinate to set.
 	 * @param y The Y-coordinate to set.
 	 */

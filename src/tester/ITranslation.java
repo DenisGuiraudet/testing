@@ -1,3 +1,5 @@
+package tester;
+
 public interface ITranslation {
 	int getTx();
 
