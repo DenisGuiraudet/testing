@@ -12,29 +12,29 @@ class MyPointTest {
     }
 
     @Test
-    void testInitEmpty() {
+    void testGetEmpty() {
         MyPoint myPoint = new MyPoint();
         assertEquals(0d, myPoint.getX());
         assertEquals(0d, myPoint.getY());
     }
 
     @Test
-    void testInitFilled() {
+    void testGetFilled() {
         MyPoint myPoint = new MyPoint(11.1, 12.2);
         assertEquals(11.1, myPoint.getX());
         assertEquals( 12.2, myPoint.getY());
     }
 
-
     @Test
-    void testSet() {
+    void testSetGetX() {
         MyPoint myPoint = new MyPoint();
-        // setX
-        assertEquals(0d, myPoint.getX());
         myPoint.setX(13.3);
         assertEquals(13.3, myPoint.getX());
-        // setY
-        assertEquals(0d, myPoint.getY());
+    }
+
+    @Test
+    void testSetGetY() {
+        MyPoint myPoint = new MyPoint();
         myPoint.setY(14.4);
         assertEquals(14.4, myPoint.getY());
     }
