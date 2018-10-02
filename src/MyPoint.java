@@ -1,5 +1,3 @@
-package main.fr.ut2j.m1ice.ootesting;
-
 import java.util.Random;
 
 import static java.lang.Math.PI;
@@ -13,7 +11,6 @@ public class MyPoint {
 	private double y;
 
 	/**
-	 * Constructor 1
 	 * Creates a MyPoint with coordinates (0, 0).
 	 */
 	public MyPoint() {
