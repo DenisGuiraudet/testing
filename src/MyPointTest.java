@@ -54,4 +54,11 @@ class MyPointTest {
         assertEquals(myPointFilled.getY() * factor,
                 myNewPoint.getY());
     }
+
+    @Test
+    void testHorizontalSymmetry() {
+        MyPoint myNewPoint = myPointFilled.horizontalSymmetry(myPointEmpty);
+        assertEquals((myPointFilled.getX() + myPointEmpty.getX()) / 2,
+                myNewPoint.getX());
+    }
 }
