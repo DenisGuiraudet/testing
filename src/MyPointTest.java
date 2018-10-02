@@ -38,4 +38,11 @@ class MyPointTest {
         myPoint.setY(14.4);
         assertEquals(14.4, myPoint.getY());
     }
+
+    @Test
+    void testDoubleNaN() {
+        MyPoint myPoint = new MyPoint();
+        myPoint.setX(Double.NaN);
+        assertNotEquals(Double.NaN, myPoint.getX());
+    }
 }
