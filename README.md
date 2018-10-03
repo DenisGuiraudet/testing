@@ -15,10 +15,10 @@ comprendre le comportement attendu des constructeurs. Utilisez des assertions po
 
 > Q.1b Le test de ces constructeurs utilisent les opérations getX et getY. Ne trouvez-vous pas cela étrange qu’un test utilise d’autres opérations ? Que faire ?
 
-```
+`
 Si un scenario contient plusieurs test, celui-ci s'arrete au premier échec, ignorant les suivants même s'ils sont justes.
 Un scenario à test unique permet de détécter plus simplement le cas d'erreur.
-```
+`
 
 > Q.1c Testez les accesseurs en lecture et écriture (les opérations get et set). Tout d’abord, testez getX et setX ensemble (car elles sont liées, idem pour y). Ensuite créez d’autres tests pour tester les opérations set avec la valeur Double.NaN (cf. la javadoc de ces opérations).
 
@@ -34,9 +34,9 @@ Un scenario à test unique permet de détécter plus simplement le cas d'erreur.
 
 > Q.2b Est-ce que votre code est sûr lorsque toutes les instructions sont couvertes par au moins un test ?
 
-```
-
-```
+`
+TODO
+`
 
 > Q.2c Ajoutez le test unitaire suivant et exécutez-le. S’il passe, bien joué. Dans tout les cas cela peut certainement vous aidez à répondre à la question précédente.
 
@@ -53,9 +53,9 @@ L’opération setPoint(Random r1, Random r2) définit les coordonnées d’un p
 > Q.3a Expliquez en quoi il est impossible de tester en l’état cette opération.
     >> On veut donc utiliser le principe du Mock pour tester cette opération.
 
-```
-
-```
+`
+TODO
+`
 
 > Q.3b Utilisez Easymock ou Mockito pour tester cette opération. 
 
