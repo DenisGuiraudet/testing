@@ -1,5 +1,4 @@
-Denis GUIRAUDET
-Matthieu Orriere
+Denis GUIRAUDET, Matthieu Orriere
 
 # Object-Oriented Software Testing
 
