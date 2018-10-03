@@ -1,4 +1,4 @@
-package tester;
+package tp;
 
 public interface ITranslation {
 	int getTx();
