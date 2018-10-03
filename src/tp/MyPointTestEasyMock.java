@@ -16,7 +16,7 @@ public class MyPointTestEasyMock extends EasyMockSupport {
     @Mock
     private MyPoint myPointMock;
 
-    @TestSubject
+    //@TestSubject
     private MyPoint myPointTest;
 
     Random randomX, randomY;
@@ -40,9 +40,9 @@ public class MyPointTestEasyMock extends EasyMockSupport {
         myPointMock.setPoint(randomX, randomY);
         replay(myPointMock);
         myPointTest.setPoint(randomX, randomY);
-        verifyAll(); // 6
-        assertEquals(myPointMock.getX(), myPointTest.getX(), 0.0001);
-        assertEquals(myPointMock.getY(), myPointTest.getY(), 0.0001);
+        //verifyAll();
+        //assertEquals(this.myPointMock.getX(), this.myPointTest.getX(), 0.0001);
+        //assertEquals(this.myPointMock.getY(), this.myPointTest.getY(), 0.0001);
     }
 
 }
