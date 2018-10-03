@@ -37,7 +37,7 @@ Un scenario à test unique permet de détécter plus simplement le cas d'erreur.
 > Q.2b Est-ce que votre code est sûr lorsque toutes les instructions sont couvertes par au moins un test ?
 
 `
-TODO
+Un test ne couvre pas forcement tous les chemins de décision d'une fonction, il faut essayer d'en couvrir le plus possible mais le risque zero n'existe pas.
 `
 
 > Q.2c Ajoutez le test unitaire suivant et exécutez-le. S’il passe, bien joué. Dans tout les cas cela peut certainement vous aidez à répondre à la question précédente.
@@ -56,7 +56,7 @@ L’opération setPoint(Random r1, Random r2) définit les coordonnées d’un p
     >> On veut donc utiliser le principe du Mock pour tester cette opération.
 
 `
-TODO
+La valeur du random étant variable, on ne peut connaitre l'exacte valeur de celle-ci.
 `
 
 > Q.3b Utilisez Easymock ou Mockito pour tester cette opération. 
