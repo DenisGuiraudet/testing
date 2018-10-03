@@ -1,4 +1,2 @@
-lib/*
-!lib/easymock-3.6/
 .idea/
 *.iml
