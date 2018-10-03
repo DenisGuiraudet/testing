@@ -15,6 +15,8 @@ class MyPointTest {
 
     @AfterEach
     void tearDown() {
+        myPointEmpty = null;
+        myPointFilled = null;
     }
 
     @Test
