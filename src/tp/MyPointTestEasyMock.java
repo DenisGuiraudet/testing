@@ -1,5 +1,7 @@
 package tp;
 
+import org.easymock.samples.ClassTested;
+import org.easymock.samples.Collaborator;
 import org.junit.*;
 import static org.junit.Assert.*;
 
@@ -14,25 +16,40 @@ public class MyPointTestEasyMock extends EasyMockSupport {
     public EasyMockRule rule = new EasyMockRule(this);
 
     @Mock
-    private MyPoint myPointEmpty, myPointFilled;
+    private Collaborator collaborator; // 1
+
+    @TestSubject
+    private ClassTested classUnderTest = new ClassTested(); // 2
+
+    @Test
+    public void addDocument() {
+        collaborator.documentAdded("New Mock"); // 3
+        replayAll(); // 4
+        classUnderTest.addDocument("New Mock", "content"); // 5
+        verifyAll(); // 6
+    }
+
+    private MyPoint myPointEmpty;
 
     @Before
-    void setUp() {
+    public void setUp() {
         myPointEmpty = new MyPoint();
-        myPointFilled = new MyPoint(11.1, 12.2);
     }
 
     @After
-    void tearDown() {
+    public void tearDown() {
+        myPointEmpty = null;
     }
 
     @Test
-    void testSetPoint() {
+    public void testSetPoint() {
+        replayAll(); // 4
         Random randomX = new Random();
         Random randomY = new Random();
         myPointEmpty.setPoint(randomX, randomY);
-        assertEquals(randomX.nextDouble(), myPointEmpty.getX(), 0.0001);
-        assertEquals(randomY.nextDouble(), myPointEmpty.getY(), 0.0001);
+        assertEquals(myPointEmpty.getX(), myPointEmpty.getX(), 0.0001);
+        assertEquals(myPointEmpty.getY(), myPointEmpty.getY(), 0.0001);
+        verifyAll(); // 6
     }
 
 }
