@@ -3,6 +3,9 @@ package tp;
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
+import static org.easymock.EasyMock.*;
+import org.easymock.*;
+
 class MyPointTest {
 
     private MyPoint myPointEmpty, myPointFilled;
