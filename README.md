@@ -4,7 +4,7 @@ Denis GUIRAUDET, Matthieu ORRIERE
 
 Master 1 ICE, GLa - V&V - Labs ([course materials](http://combemale.fr/teaching/m1ice/))
 
-> Créez un projet Java, récupérez la classe tester.MyPoint, et rajoutez la librairie JUnit à votre projet.
+> Créez un projet Java, récupérez la classe MyPoint, et rajoutez la librairie JUnit à votre projet.
 
 ## Test Unitaire pour Java avec JUnit
 
@@ -43,7 +43,7 @@ Un test ne couvre pas forcement tous les chemins de décision d'une fonction, il
 > Q.2c Ajoutez le test unitaire suivant et exécutez-le. S’il passe, bien joué. Dans tout les cas cela peut certainement vous aidez à répondre à la question précédente.
 
     @Test public void testCentralSymmetryNULL ( ) {
-        new tester.MyPoint ( 1 0 , 2 0 ) . centralSymmetry ( null ) ;
+        new MyPoint ( 1 0 , 2 0 ) . centralSymmetry ( null ) ;
     }
 
 ## Test d'intégration pour Java avec EasyMock ou Mockito
@@ -63,11 +63,11 @@ La valeur du random étant variable, on ne peut connaitre l'exacte valeur de cel
 
 Avec Mockito :
 - N’oubliez pas @RunWith (MockitoJUnitRunner.class). Vous aurez besoin de 2 attributs Random annotée avec @Mock. Le but est de simuler l’opération nextInt(). 
-- L’opération translate(tester.ITranslation) déplace le point selon le vecteur de translation donné en paramètre. Cependant tester.ITranslation est une interface, on ne peut donc pas l’instancier.
+- L’opération translate(ITranslation) déplace le point selon le vecteur de translation donné en paramètre. Cependant ITranslation est une interface, on ne peut donc pas l’instancier.
 
 Avec Easymock : voir la refcard et les slides du cours.
 
-> Q.3c Supposons que nous ne disposons pas d’une implémentation de tester.ITranslation pour tester cette opération, utilisez Mockito ou Easymock et tester finalement cette opération.
+> Q.3c Supposons que nous ne disposons pas d’une implémentation de ITranslation pour tester cette opération, utilisez Mockito ou Easymock et tester finalement cette opération.
 
 ## Evaluation 
 
